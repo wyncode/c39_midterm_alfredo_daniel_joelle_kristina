@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+// import React, { useContext } from 'react';
+// import { AppContext } from '../context/AppContext';
 
-const ContextDemo = () => {
-  const { contextMessage, contextMethod } = useContext(AppContext);
+// const ContextDemo = () => {
+//   const { contextMessage, contextMethod } = useContext(AppContext);
 
-  contextMethod();
+//   contextMethod();
 
-  return <h3>{contextMessage}</h3>;
-};
+//   return <h3>{contextMessage}</h3>;
+// };
 
-export default ContextDemo;
+// export default ContextDemo;
