@@ -2,3 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.pokecards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokecards a {
+  border: 1px black solid;
+  padding: 10px;
+  margin: 10px;
+}

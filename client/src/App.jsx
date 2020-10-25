@@ -6,6 +6,8 @@ import Home from './components/Home'
 import Pokedex from './components/Pokedex'
 import Pokemon from './components/Pokemon'
 import './App.css';
+import './pokeball.css'
+
 
 
 const App = () => {
@@ -24,8 +26,8 @@ const App = () => {
     <Link to="/">Home</Link>
       <Switch>
         <Route  exact path = "/" component={Home} />
-        <Route path = "/pokedex" component={Pokedex} />
-        <Route path = "/pokemon" component={Pokemon} />
+        <Route  path = "/pokedex" component={Pokedex} />
+        <Route  path = "/pokemon/:name" component={Pokemon} />
       </Switch>
     </BrowserRouter>
   );
