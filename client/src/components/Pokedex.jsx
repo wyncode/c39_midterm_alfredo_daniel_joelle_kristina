@@ -18,17 +18,17 @@ export default function Pokedex() {
     },[])
 
     return (
-        
-        <div>
+    <div >
         <h1>Pokedex Component</h1>
         <input type="search" placeholder="Search...."/>
-        {search && search.map((pokemon,index) => {
-           return (<Pokecard key={index} pokemon={pokemon.url}/>);
+            <div className='pokecards'>
+            {search && search.map((pokemon,index) => {
+            return (<Pokecard key={index} pokemon={pokemon.url}/>);
             
         }) 
         
         }
-
+        </div>
         <Link to="/Pokemon">image</Link>
     </div>
     )

@@ -18,12 +18,10 @@ export default function Pokecard ({pokemon}) {
     },[]);
 
     return (
-
-
-        <div>
+        <a href={`/pokemon/${name}`}>
             <h6>{name}</h6>
             <img src={card}/>
-        </div>
+        </a>
     );
 };
 

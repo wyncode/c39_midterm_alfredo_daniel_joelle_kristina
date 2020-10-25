@@ -24,8 +24,8 @@ const App = () => {
     <Link to="/">Home</Link>
       <Switch>
         <Route  exact path = "/" component={Home} />
-        <Route path = "/pokedex" component={Pokedex} />
-        <Route path = "/pokemon" component={Pokemon} />
+        <Route  path = "/pokedex" component={Pokedex} />
+        <Route  path = "/pokemon/:name" component={Pokemon} />
       </Switch>
     </BrowserRouter>
   );
