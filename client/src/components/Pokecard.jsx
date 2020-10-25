@@ -2,15 +2,15 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 export default function Pokecard ({pokemon}) {
-    const [card, setCard] = useState('https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png');
+    const [card, setCard] = useState('');
+    const [name, setName] = useState('')
 
     useEffect(() => {
         
         const fetchData = async () => {
-            let response = await axios.get(`${pokemon.url}`);
-            console.log(response.data.sprites.front_default);  
+            let response = await axios.get(`${pokemon}`);  
             setCard(response.data.sprites.front_default);
-            
+            setName(response.data.forms[0].name);
         };
         
         fetchData();
@@ -21,8 +21,26 @@ export default function Pokecard ({pokemon}) {
 
 
         <div>
-            {pokemon.name}
+            <h6>{name}</h6>
             <img src={card}/>
         </div>
     );
 };
+
+// import React from 'react';
+// import Card from 'react-bootstrap/Card';
+
+// const Pokecard = () => {
+//   return (
+//     <Card style={{ width: 200, margin: 10 }}>
+//       <a href={null}>
+//         <Card.Img src={null} />
+//       </a>
+//       <Card.Body>
+//         <Card.Title>name</Card.Title>
+//       </Card.Body>
+//     </Card>
+//   );
+// };
+
+// export default Recipe;
