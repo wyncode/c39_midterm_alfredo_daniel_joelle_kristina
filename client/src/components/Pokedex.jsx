@@ -2,6 +2,7 @@ import React, {useState, useEffect}from 'react';
 import axios from 'axios';
 import Pokecard from './Pokecard';
 import Searchbar from './Searchbar';
+import Dropdown from './Dropdown.jsx';
 
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
@@ -13,10 +14,8 @@ export default function Pokedex() {
         const fetchData = async () => {
             let response = await axios.get(
                 'https://pokeapi.co/api/v2/pokemon?limit=151'
-            );
-           
-            setApiData(response.data.results);  
-            console.log(response.data.results);           
+            );          
+            setApiData(response.data.results);           
         };        
         fetchData();
     },[])
@@ -30,6 +29,7 @@ export default function Pokedex() {
     <div >
         <h1>Pokedex cards</h1>
         <Searchbar handleSearch={handleSearch}/>
+        <Dropdown />
         <div className='pokecards'>
             {apiData && filteredPokemon.map((pokemon,index) => {
             return (<Pokecard key={index} pokemon={pokemon}/>);           

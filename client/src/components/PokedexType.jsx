@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import Pokecard from './Pokecard';
 
-export default function Pokedex() {
+export default function PokedexType() {
     const [search, setSearch] = useState([]);
     const [searchValue, setSearchValue] = useState('');
 
@@ -32,7 +32,7 @@ export default function Pokedex() {
         
         <div>
             
-            <h1>Pokedex Component</h1>
+            <h1>Types</h1>
             <form>
             {/* <input type="search" placeholder="Search by name or type."/> */}
             <input onChange={event => setSearchValue(event.target.value)} />

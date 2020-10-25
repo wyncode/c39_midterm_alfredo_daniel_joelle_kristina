@@ -11,15 +11,6 @@ import './pokeball.css'
 
 
 const App = () => {
-  // const [serverMessage, setServerMessage] = useState('');
-
-  // const fetchDemoData = () => {
-  //   fetch('/api/demo')
-  //     .then((response) => response.json())
-  //     .then((data) => setServerMessage(data.message));
-  // };
-
-  // useEffect(fetchDemoData, []);
 
   return (
     <BrowserRouter>
