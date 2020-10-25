@@ -6,6 +6,8 @@ import Home from './components/Home'
 import Pokedex from './components/Pokedex'
 import Pokemon from './components/Pokemon'
 import './App.css';
+import './pokeball.css'
+
 
 
 const App = () => {
