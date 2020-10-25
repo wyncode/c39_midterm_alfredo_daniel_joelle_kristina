@@ -23,7 +23,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-    <Link to="/">Home</Link>
       <Switch>
         <Route  exact path = "/" component={Home} />
         <Route  path = "/pokedex" component={Pokedex} />
