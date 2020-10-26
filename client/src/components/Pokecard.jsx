@@ -21,13 +21,17 @@ export default function Pokecard ({pokemon}) {
     },[pokemon]);
 
     return (
-
-        <div className={"card "+ type + " " + type1}>
+        <>
+        {image && (
+            <div className={"card "+ type + " " + type1}>
             <Link to={`/pokemon/${pokemon.name}`}>
                 <h6>{pokemon.name}</h6>
-                <img src={image}/>
+                <img alt= {pokemon.name} src={image}/>
             </Link>
         </div>
+        )}
+        
+        </>
     );
 };
 
