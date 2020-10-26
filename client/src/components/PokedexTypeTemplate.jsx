@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios';
 import Pokecard from './Pokecard';
 
-export default function PokedexType() {
+export default function PokedexTypeTemplate() {
     const [search, setSearch] = useState([]);
     const [searchValue, setSearchValue] = useState('');
 

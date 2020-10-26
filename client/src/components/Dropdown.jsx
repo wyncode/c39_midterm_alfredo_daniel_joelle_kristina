@@ -1,28 +1,27 @@
 import React, {useState} from 'react';
+import { Link } from "react-router-dom";
 
+export default function Dropdown() {
 
-export default function Dropdown () {
-
-    const [open, setOpen] = useState(false);
-
-    const handleOpening = (e) => {
-        e.preventDefault();
-        alert('open');
-    }
-
+    const [closed, setClosed] = useState(true);
 
     return (
         <div>
-            <div id="myNav" className="overlay">
-                <a href="#" className="closebtn">&times;</a>
-                <div class="overlay-content">
-                    <a href="#">Fire</a>
-                    <a href="#">Grass</a>
-                    <a href="#">Water</a>
-                    <a href="#">Ghost</a>
-                </div>
+            <div id="dropList" className={closed ? "closed" : " "}>
+                <button className="closeDropList" onClick={(e) => setClosed(!closed)}>
+                    &times;
+                </button>
+                <Link to="/type/fire" className="fire">Fire</Link>
+                <Link to="/type/water" className="water">Water</Link>
+                <Link to="/type/ground" className="ground">Ground</Link>
+                <Link to="/type/grass" className="grass">Grass</Link>
+                <Link to="/type/poison" className="poison">Poison</Link>
+                <Link to="/type/rock" className="rock">Rock</Link>
+                <Link to="/type/normal" className="normal">Normal</Link>
+                <Link to="/type/bug" className="bug">Bug</Link>
+                <Link to="/type/steel" className="steel">Steel</Link>
             </div>
-            <button>Types</button>
+            <button onClick={(e) => setClosed(!closed)}>Types</button>
         </div>
-    )
-}
+    );
+};
