@@ -8,7 +8,7 @@ export default function Home() {
         <div>
             <Link to="/Pokedex">
                 <button>HARDCOREBUUUUUTTTON</button>
-                {/* <div className="box child-to-body">
+                <div className="box child-to-body">
                 <img src="pokeBannerGimp.png" width="250" alt="" />
                 <div className="poke_box">
                 <div className="pokeball">
@@ -16,7 +16,7 @@ export default function Home() {
                 </div>   
                 </div>
                 <p className="has-text-centered" ></p>
-                </div> */}
+                </div>
             </Link>
         </div>
     )

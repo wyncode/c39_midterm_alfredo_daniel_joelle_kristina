@@ -25,7 +25,7 @@ export default function Pokemon() {
             setTypeClass1(response.data.types[1] && response.data.types[1].type.name);
         };
         fetchData();
-    },[]);
+    },[name]);
 
     return (
         <div className={"pokemon " + typeClass + " " + typeClass1}>
