@@ -13,7 +13,7 @@ export default function Pokedex() {
        
         const fetchData = async () => {
             let response = await axios.get(
-                'https://pokeapi.co/api/v2/pokemon?limit=897'
+                'https://pokeapi.co/api/v2/pokemon?limit=150'
             );          
             setApiData(response.data.results);           
         };        
