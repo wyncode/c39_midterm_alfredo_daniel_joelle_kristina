@@ -1,6 +1,12 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
 }
 img {
   max-width: 100%;
@@ -9,6 +15,9 @@ img {
 .pokecards {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .pokecards div {
@@ -20,52 +29,51 @@ img {
 .card {
   max-width: 300px;
 }
+.card h6 {
+  font-size: 1.2rem;
+}
 .bug {
   background-image: linear-gradient(
     to left top,
-    #cef199,
-    #c2ed82,
-    #b7ea6b,
-    #aae652,
+    #f2fae5,
+    #dff5bd,
+    #caef93,
+    #b5e968,
     #9de233
   );
 }
-
 .dark {
   background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
-    #6a4f47,
-    #5b423b,
-    #4c362f,
-    #3e2a23,
-    #301e18
+    #b69d95,
+    #8f7971,
+    #6a564f,
+    #473630,
+    #261813
   );
 }
-
 .dragon {
   background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
-    #b856ec,
-    #a545e0,
-    #9234d3,
-    #7e22c7,
-    #6909bb
+    #ebe2f2,
+    #c9aede,
+    #a67bc9,
+    #8148b4,
+    #59079e
   );
 }
-
 .electric {
   background-image: linear-gradient(
     to left top,
-    #f9ff00,
-    #fbf216,
-    #fbe524,
-    #fad82f,
-    #f7cc38
+    #f2f66e,
+    #f1e858,
+    #f1da42,
+    #f1cc2b,
+    #f1bd07
   );
 }
-
 .fairy {
   background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
@@ -77,30 +85,31 @@ img {
     #e096d7
   );
 }
-
 .fighting {
   background-image: linear-gradient(
     to left top,
-    #8a3c22,
-    #76311c,
-    #632615,
-    #511c0e,
+    #b69d95,
+    #98786e,
+    #7a5449,
+    #5d3327,
     #3f1203
   );
 }
-
 .fire {
   background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
-    to right bottom,
-    #d66508,
-    #db5804,
-    #e14905,
-    #e6350a,
+    to left top,
+    #fc8840,
+    #f87331,
+    #f45d24,
+    #f04119,
     #eb1212
   );
 }
-
+.fire:hover {
+  background-image: url(https://www.searchpng.com/wp-content/uploads/2018/12/Fire-PNG-Transparent-715x715.png);
+  background-size: contain;
+}
 .flying {
   background-image: linear-gradient(
     to left top,
@@ -111,56 +120,53 @@ img {
     #4344eb
   );
 }
-
 .ghost {
   background-image: linear-gradient(
     to left top,
-    #7b34df,
-    #6426b4,
-    #4e198c,
-    #370c66,
-    #220342
+    #a998bd,
+    #9379b2,
+    #7d5aa6,
+    #663b99,
+    #4e198c
   );
 }
-
 .grass {
   background-image: url(https://images.unsplash.com/photo-1492185244344-91fde303149e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
   background-image: linear-gradient(
     to left top,
-    #08d68a,
-    #00dc80,
-    #00e173,
-    #00e665,
-    #12eb53
+    #d4fa99,
+    #bbe87a,
+    #a3d65b,
+    #89c439,
+    #6fb306
   );
 }
-
 .grass.poison {
   background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
-    #08d68a,
-    #00dc80,
-    #00e173,
-    #00e665,
-    #12eb53 #dd7dd1 #d466d1,
+    #d4fa99,
+    #bbe87a,
+    #a3d65b,
+    #89c439,
+    #6fb306,
+    #dd7dd1,
+    #d466d1,
     #ca4fd1,
     #bc34d3,
     #ac08d6
   );
 }
-
 .ground {
   background-image: linear-gradient(
     to left top,
-    #574b2d,
-    #4d4023,
-    #433419,
-    #392a0f,
-    #301f01
+    #d9d0c0,
+    #aca08e,
+    #80735e,
+    #574933,
+    #302209
   );
 }
-
 .ice {
   background-image: linear-gradient(
     to left top,
@@ -171,53 +177,48 @@ img {
     #66caf9
   );
 }
-
 .normal {
   background-image: linear-gradient(
     to left top,
-    #b5b5ac,
-    #96958e,
-    #777671,
-    #5a5955,
-    #3e3d3b
+    #cbcbc8,
+    #a5a5a2,
+    #80807e,
+    #5d5d5b,
+    #3c3c3b
   );
 }
-
 .poison {
   background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
-    #ac08d6,
-    #bc34d3,
-    #ca4fd1,
-    #d466d1,
-    #dd7dd1
+    #d590e6,
+    #cf78da,
+    #ca5ece,
+    #c640bf,
+    #c105b0
   );
 }
-
 .psychic {
   background-image: linear-gradient(
     to left top,
-    #e067ad,
-    #e058a4,
-    #e0479b,
-    #e03291,
+    #f179be,
+    #ed66b1,
+    #e951a3,
+    #e43895,
     #df0c86
   );
 }
-
 .rock {
   background-image: url(https://images.unsplash.com/photo-1549645402-a9d655c5c344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
-    #d5b34c,
-    #c5a543,
-    #b69739,
-    #a78930,
+    #edd68e,
+    #d7bf74,
+    #c2a85a,
+    #ad9241,
     #987c27
   );
 }
-
 .steel {
   background-image: linear-gradient(
     to left top,
@@ -228,15 +229,14 @@ img {
     #53595f
   );
 }
-
 .water {
   background-image: linear-gradient(
     to left top,
-    #4051f3,
-    #3646ee,
-    #2b3be9,
-    #1f2ee4,
-    #0d20de
+    #81baf9,
+    #5096ee,
+    #2070e0,
+    #0049cc,
+    #0918b2
   );
 }
 
