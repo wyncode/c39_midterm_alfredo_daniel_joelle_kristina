@@ -1,23 +1,21 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-
-
+import Logo from '../images/Logo.png'
 
 export default function Home() {
     return (
-        <div>
+    
+
+        <div id="HomeBackground" >
+            <img className= "logo" src= {Logo} alt=""></img>
             <Link to="/Pokedex">
-                <button>HARDCOREBUUUUUTTTON</button>
-                <div className="box child-to-body">
-                <img src="pokeBannerGimp.png" width="250" alt="" />
-                <div className="poke_box">
+            <div className="poke_box">
                 <div className="pokeball">
-                <div className="pokeball__button"></div>
+                    <div className="pokeball__button"></div>
                 </div>   
-                </div>
-                <p className="has-text-centered" ></p>
-                </div>
-            </Link>
+            </div>
+            </Link> 
+            <h1> Hardcore Pokedex </h1>
         </div>
     )
 }
