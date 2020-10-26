@@ -20,6 +20,75 @@ img {
 .card {
   max-width: 300px;
 }
+.bug {
+  background-image: linear-gradient(
+    to left top,
+    #cef199,
+    #c2ed82,
+    #b7ea6b,
+    #aae652,
+    #9de233
+  );
+}
+
+.dark {
+  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: linear-gradient(
+    to left top,
+    #6a4f47,
+    #5b423b,
+    #4c362f,
+    #3e2a23,
+    #301e18
+  );
+}
+
+.dragon {
+  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: linear-gradient(
+    to left top,
+    #b856ec,
+    #a545e0,
+    #9234d3,
+    #7e22c7,
+    #6909bb
+  );
+}
+
+.electric {
+  background-image: linear-gradient(
+    to left top,
+    #f9ff00,
+    #fbf216,
+    #fbe524,
+    #fad82f,
+    #f7cc38
+  );
+}
+
+.fairy {
+  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+  background-image: linear-gradient(
+    to left top,
+    #ecd9ea,
+    #e9c9e6,
+    #e6b8e1,
+    #e3a7dc,
+    #e096d7
+  );
+}
+
+.fighting {
+  background-image: linear-gradient(
+    to left top,
+    #8a3c22,
+    #76311c,
+    #632615,
+    #511c0e,
+    #3f1203
+  );
+}
+
 .fire {
   background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
@@ -31,6 +100,29 @@ img {
     #eb1212
   );
 }
+
+.flying {
+  background-image: linear-gradient(
+    to left top,
+    #a4b8f9,
+    #869dfa,
+    #6c81f8,
+    #5564f3,
+    #4344eb
+  );
+}
+
+.ghost {
+  background-image: linear-gradient(
+    to left top,
+    #7b34df,
+    #6426b4,
+    #4e198c,
+    #370c66,
+    #220342
+  );
+}
+
 .grass {
   background-image: url(https://images.unsplash.com/photo-1492185244344-91fde303149e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
   background-image: linear-gradient(
@@ -42,41 +134,55 @@ img {
     #12eb53
   );
 }
-.rock {
-  background-image: url(https://images.unsplash.com/photo-1549645402-a9d655c5c344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-}
-.fairy {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
-  background-image: linear-gradient(
-    to left top,
-    #d608c5,
-    #dc53ce,
-    #e17bd5,
-    #e49ddc,
-    #e7bde2
-  );
-}
-.flying {
-  background-image: linear-gradient(
-    to left top,
-    #1d08d6,
-    #005af4,
-    #0082f3,
-    #00a1e2,
-    #3fbcd2
-  );
-}
+
 .grass.poison {
   background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
-    green,
-    #bc34d3,
+    #08d68a,
+    #00dc80,
+    #00e173,
+    #00e665,
+    #12eb53 #dd7dd1 #d466d1,
     #ca4fd1,
-    #d466d1,
-    #dd7dd1
+    #bc34d3,
+    #ac08d6
   );
 }
+
+.ground {
+  background-image: linear-gradient(
+    to left top,
+    #574b2d,
+    #4d4023,
+    #433419,
+    #392a0f,
+    #301f01
+  );
+}
+
+.ice {
+  background-image: linear-gradient(
+    to left top,
+    #ccf9f8,
+    #b1eef5,
+    #95e3f5,
+    #7cd7f7,
+    #66caf9
+  );
+}
+
+.normal {
+  background-image: linear-gradient(
+    to left top,
+    #b5b5ac,
+    #96958e,
+    #777671,
+    #5a5955,
+    #3e3d3b
+  );
+}
+
 .poison {
   background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
@@ -88,74 +194,84 @@ img {
     #dd7dd1
   );
 }
-.fighting {
-  background-image: linear-gradient(
-    to left top,
-    #ff000f,
-    #ec0621,
-    #d7132c,
-    #c11d33,
-    #ab2438
-  );
-}
+
 .psychic {
   background-image: linear-gradient(
     to left top,
-    #2e494b,
-    #5a706a,
-    #8a988e,
-    #bdc2b6,
-    #f1eee3
+    #e067ad,
+    #e058a4,
+    #e0479b,
+    #e03291,
+    #df0c86
   );
 }
-.electric {
+
+.rock {
+  background-image: url(https://images.unsplash.com/photo-1549645402-a9d655c5c344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
-    #f9ff00,
-    #fbf216,
-    #fbe524,
-    #fad82f,
-    #f7cc38
+    #d5b34c,
+    #c5a543,
+    #b69739,
+    #a78930,
+    #987c27
   );
 }
-.ground {
+
+.steel {
   background-image: linear-gradient(
     to left top,
-    #675832,
-    #877a58,
-    #a89d81,
-    #cac2ac,
-    #ede8d9
+    #dfe1e3,
+    #babdc0,
+    #969a9e,
+    #74797e,
+    #53595f
   );
 }
-.bug {
-  background-image: url(https://images.unsplash.com/photo-1528640936814-4460bc015292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
-  background-image: linear-gradient(
-    to left top,
-    #ac08d6,
-    #bc34d3,
-    #ca4fd1,
-    #d466d1,
-    #dd7dd1
-  );
-}
+
 .water {
   background-image: linear-gradient(
     to left top,
-    #06e6ca,
-    #00e4db,
-    #00e1ea,
-    #00ddf6,
-    #00d9ff
+    #4051f3,
+    #3646ee,
+    #2b3be9,
+    #1f2ee4,
+    #0d20de
   );
 }
-.normal {
-  background-image: linear-gradient(
-    to left top,
-    #dcf744,
-    #ffdc7f,
-    #ffd8d5,
-    #ffedff,
-    #ffffff
-  );
+
+/* DropList styling */
+#dropList {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c7c3c3f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: height 1s;
 }
+#dropList.closed {
+  height: 0;
+}
+#dropList a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  width: 10%;
+  margin: 5px;
+  min-width: 100px;
+  text-align: center;
+}
+#dropList .closeDropList {
+  align-self: flex-end;
+  margin-right: 8%;
+  background-color: transparent;
+  font-size: 5rem;
+  border: none;
+  justify-self: flex-start;
+}
+/* end of DropList styling */

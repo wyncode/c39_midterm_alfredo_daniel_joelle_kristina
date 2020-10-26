@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 export default function Pokecard ({pokemon}) {
     const [image, setImage] = useState('');
@@ -10,7 +10,7 @@ export default function Pokecard ({pokemon}) {
     useEffect(() => {
         
         const fetchData = async () => {
-            let response = await axios.get(`${pokemon.url}`);  
+            let response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`);  
             setImage(response.data.sprites.other["official-artwork"].front_default);
             setType(response.data.types[0].type.name);
             setType1(response.data.types[1] && response.data.types[1].type.name);
