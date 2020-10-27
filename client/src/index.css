@@ -4,12 +4,27 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  font-weight: 600;
   text-align: center;
   color: #000;
 }
 img {
   max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.backbutton {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 16px;
+  border-radius: 12%;
+}
+
+.backbutton:hover {
+  background-color: slategray;
+  color: white;
 }
 
 .pokecards {
@@ -49,6 +64,53 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 10%;
+    border: solid 1.6px black;
+    margin: 2px;
+    padding: 20px;
+    
+}
+
+.pokepage .name {
+  font-weight: 800;
+  font-size: 38px;
+  text-transform: capitalize;
+  margin: 10px;
+}
+
+.pokepage .id {
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.pokepage .physical {
+  font-size: 13px;
+  margin: 8px;
+  opacity: 0.9;
+}
+
+.pokepage .typeword {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.pokepage .type {
+  text-transform: uppercase;
+  margin: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+
+
+.pokepage .abilities {
+  text-transform: capitalize;
+  margin: 4px;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 .card {

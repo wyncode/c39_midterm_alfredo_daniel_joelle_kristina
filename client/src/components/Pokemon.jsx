@@ -31,7 +31,7 @@ export default function Pokemon() {
     return (
         <div className={"pokepage " + typeClass + " " + typeClass1}>
           <Link to="/Pokedex">
-             <button>Back</button>
+             <button className="backbutton">Back</button>
            </Link>
 
            <div className="container">
@@ -41,26 +41,26 @@ export default function Pokemon() {
       
             <div className="info">
 
+            <div className="id">
+              <p>#{pokemon && pokemon.id}</p>
+              </div>
+
               <div className="name">
               <p>{pokemon && pokemon.name}</p>
               </div>
 
-              <div className="id">
-              <p>{pokemon && pokemon.id}</p>
-              </div>
-
-              <div className="physical">
-              <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
-              <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
-              </div>
 
               <div className="type">
-              Type:
               {pokemon &&
                 types.map((type, index) => {
                   return <p key={index}>{type.type.name}</p>;
                 })}
+                 <span className="typeword">
+                  Type
+                </span>
               </div>
+
+             
 
               <div className="abilities">
               Abilities:
@@ -69,6 +69,11 @@ export default function Pokemon() {
                   return <p>{ability.ability.name}</p>;
                 })}
                </div>
+
+               <div className="physical">
+              <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
+              <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
+              </div>
 
           </div>
         </div>
