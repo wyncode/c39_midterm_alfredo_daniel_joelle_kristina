@@ -22,6 +22,7 @@ export default function Pokedex() {
             }, 2000);        
         }        
         fetchData()
+
     },[])
 
     const handleSearch = (searchTerm) => {
