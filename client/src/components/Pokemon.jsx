@@ -10,6 +10,7 @@ export default function Pokemon() {
     const [abilities, setAbilities] = useState([]);
     const [typeClass, setTypeClass] = useState(["pokemon"]);
     const [typeClass1, setTypeClass1] = useState("");
+    const [moves, setMoves] = useState([]);
     
 
     useEffect(() => {
@@ -23,41 +24,72 @@ export default function Pokemon() {
             setAbilities(response.data.abilities);
             setTypeClass(response.data.types[0].type.name);
             setTypeClass1(response.data.types[1] && response.data.types[1].type.name);
+            setMoves(response.data.moves)
         };
         fetchData();
     },[name]);
 
     return (
-        <div className={"pokemon " + typeClass + " " + typeClass1}>
-        <Link to="/Pokedex">
-          <button>Back</button>
-        </Link>
-        <div className="card">
-          <div className="image">
+        <div className={"pokepage " + typeClass + " " + typeClass1}>
+          <Link to="/Pokedex">
+             <button className="backbutton">Back</button>
+           </Link>
+
+           <div className="container">
+           <div className="image">
             <img src={image} alt={pokemon.name} />
-          </div>
-          <div className="info">
-            <p>Name: {pokemon && pokemon.name}</p>
-            <p>ID: {pokemon && pokemon.id}</p>
-            <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
-            <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
-            <div>
-              Type:
+            </div>
+      
+            <div className="info">
+
+            <div className="id">
+              <p>#{pokemon && pokemon.id}</p>
+              </div>
+
+              <div className="name">
+              <p>{pokemon && pokemon.name}</p>
+              </div>
+
+
+              <div className="type">
               {pokemon &&
                 types.map((type, index) => {
                   return <p key={index}>{type.type.name}</p>;
                 })}
-            </div>
-            <div>
+                 <span className="typeword">
+                  Type
+                </span>
+              </div>
+
+             
+
+              <div className="abilities">
               Abilities:
               {pokemon &&
                 abilities.map((ability, index) => {
                   return <p>{ability.ability.name}</p>;
                 })}
-            </div>
+               </div>
+
+               <div className="physical">
+              <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
+              <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
+              </div>
+
+                <div className='moves'>
+                <button onClick={()=>{}}>Show Moves</button>
+                <div>Moves:
+                {pokemon &&
+                moves.map((move, index) =>{
+                  return <p>{move.move.name}</p>
+                }
+                )}
+                </div>
+                </div>
+
           </div>
         </div>
-      </div>
+       </div>
     )
     
 }
