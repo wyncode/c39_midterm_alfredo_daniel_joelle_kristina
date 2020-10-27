@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'pokemonsolid';
+  src: local('pokemonsolid'), url(./fonts/pokemonsolid.ttf) format('truetype');;
+}
+
 
 #HomeBackground {
  background-image: url("./images/HomeBackground.jpg");
@@ -9,15 +14,15 @@
 
 .logo{
   width: 550px;
-
 }
 
 #HomeBackground h1 {
   position: absolute;
   bottom: 22%;
   width: 100%;
-
-}
+  font-family: 'pokemonsolid';
+  color: black;
+  }
 
 .poke_box{
     position: absolute;
@@ -41,12 +46,10 @@
     animation-play-state: running;
 }
 
-/* .pokeball:hover{
-    animation-play-state: running;
-} */
+
 
 @keyframes shake {
-    0 { transform: translate(0, 0) rotate(0); }
+    0% { transform: translate(0, 0) rotate(0);    }
     20% { transform: translate(-10px, 0) rotate(-20deg); }
     30% { transform: translate(10px, 0) rotate(20deg); }
     50% { transform: translate(-10px, 0) rotate(-10deg); }
@@ -88,9 +91,6 @@
     animation-play-state: running;
   }
 
-  /* .pokeball:hover .pokeball__button{
-      animation-play-state: running;
-  } */
 
   @keyframes blink {
     from { background: #eee;}
