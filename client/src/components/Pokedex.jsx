@@ -36,18 +36,22 @@ export default function Pokedex() {
             <h1>Loading...</h1>
         </div>
             ) : (
-                <div >
-                <h1>Pokédex</h1>
-                <Searchbar handleSearch={handleSearch}/>
-                <Dropdown />
+                <div className="pokedexPage">
+                    <Dropdown />
+                    <div className="navSticky">
+                        <nav>
+                            <h1>Pokédex</h1>
+                            <Searchbar handleSearch={handleSearch}/>
+                            
+                        </nav>
+                    </div>
                 <div className='pokecards'>
                     {apiData && filteredPokemon.map((pokemon,index) => {
                     return (<Pokecard key={index} pokemon={pokemon}/>);           
                     })}
                 </div>
-            </div>
-        )}
-    
-    </>
+                </div>
+        )}   
+        </>
     )
 }
