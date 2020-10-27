@@ -21,6 +21,9 @@ button {
   font-size: 15px;
   padding: 16px;
   border-radius: 12%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .backbutton:hover {
@@ -101,9 +104,17 @@ button {
 }
 
 .pokepage .container {
-  width: 50%;
-  min-width: 500px;
+  width: 80%;
+  max-width: 1000px;
+  min-width: 300px;
+  flex-wrap: wrap;
+  justify-content: center;
   display: flex;
+}
+
+.pokepage .container > div {
+  width: 50%;
+  min-width: 300px;
 }
 
 .pokepage .image {
@@ -125,7 +136,6 @@ button {
   justify-content: center;
   border-radius: 10%;
   border: solid 1.6px black;
-  margin: 2px;
   padding: 20px;
 }
 
@@ -1259,3 +1269,21 @@ button {
 .moves div {
   display: none;
 }
+
+.backbutton {
+  position: absolute;
+  }
+  .pokepage .container {
+  width: 80%;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
+  .pokepage .container > div {
+  width: 50%;
+  min-width: 300px;
+  }
+  
+ 
+  
+  
