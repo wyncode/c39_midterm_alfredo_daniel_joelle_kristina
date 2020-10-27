@@ -10,7 +10,7 @@ export default function Pokemon() {
     const [abilities, setAbilities] = useState([]);
     const [typeClass, setTypeClass] = useState(["pokemon"]);
     const [typeClass1, setTypeClass1] = useState("");
-    // const [moves, setMoves] = useState([]);
+    const [moves, setMoves] = useState([]);
     
 
     useEffect(() => {
@@ -24,6 +24,7 @@ export default function Pokemon() {
             setAbilities(response.data.abilities);
             setTypeClass(response.data.types[0].type.name);
             setTypeClass1(response.data.types[1] && response.data.types[1].type.name);
+            setMoves(response.data.moves)
         };
         fetchData();
     },[name]);
@@ -74,6 +75,17 @@ export default function Pokemon() {
               <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
               <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
               </div>
+
+                <div className='moves'>
+                <button onClick={()=>{}}>Show Moves</button>
+                <div>Moves:
+                {pokemon &&
+                moves.map((move, index) =>{
+                  return <p>{move.move.name}</p>
+                }
+                )}
+                </div>
+                </div>
 
           </div>
         </div>
