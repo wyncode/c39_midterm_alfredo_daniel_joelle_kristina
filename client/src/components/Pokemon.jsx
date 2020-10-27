@@ -77,7 +77,7 @@ export default function Pokemon() {
               </div>
 
                 <div className='moves'>
-                <button onClick={()=>{}}>Show Moves</button>
+                {/* <button onClick={()=>{}}>Show Moves</button> */}
                 <div>Moves:
                 {pokemon &&
                 moves.map((move, index) =>{

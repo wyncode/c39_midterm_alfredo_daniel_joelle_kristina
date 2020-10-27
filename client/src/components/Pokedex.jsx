@@ -7,17 +7,22 @@ import Dropdown from './Dropdown.jsx';
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
     const [apiData, setApiData] = useState([]);
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
-       
+       setLoading(true)
         const fetchData = async () => {
             let response = await axios.get(
                 'https://pokeapi.co/api/v2/pokemon?limit=151'
-            );          
-            setApiData(response.data.results);           
-        };        
-        fetchData();
+            )       
+            setApiData(response.data.results);   
+            setTimeout(() => {
+                setLoading(false)
+            }, 2000);        
+        }        
+        fetchData()
+
     },[])
 
     const handleSearch = (searchTerm) => {
@@ -26,15 +31,24 @@ export default function Pokedex() {
     const filteredPokemon = apiData && apiData.filter(pokemon => pokemon.name.includes(searchValue));
   
     return (
-    <div >
-        <h1>Pokédex</h1>
-        <Searchbar handleSearch={handleSearch}/>
-        <Dropdown />
-        <div className='pokecards'>
-            {apiData && filteredPokemon.map((pokemon,index) => {
-            return (<Pokecard key={index} pokemon={pokemon}/>);           
-            })}
+        <>
+        {loading ? (
+        <div>
+            <h1>Loading...</h1>
         </div>
-    </div>
+            ) : (
+                <div >
+                <h1>Pokédex</h1>
+                <Searchbar handleSearch={handleSearch}/>
+                <Dropdown />
+                <div className='pokecards'>
+                    {apiData && filteredPokemon.map((pokemon,index) => {
+                    return (<Pokecard key={index} pokemon={pokemon}/>);           
+                    })}
+                </div>
+            </div>
+        )}
+    
+    </>
     )
 }
