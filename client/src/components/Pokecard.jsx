@@ -24,9 +24,13 @@ export default function Pokecard ({pokemon}) {
         <>
         {image && (
             <div className={"card "+ type + " " + type1}>
-            <Link to={`/pokemon/${pokemon.name}`}>
+
+            <Link className="cardfront" to={`/pokemon/${pokemon.name}`}>
                 <h6>{pokemon.name}</h6>
                 <img alt= {pokemon.name} src={image}/>
+            </Link>
+            <Link className="cardback" to={`/pokemon/${pokemon.name}`}>
+                {/* <p>BACK</p>  */}
             </Link>
         </div>
         )}

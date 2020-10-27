@@ -13,7 +13,7 @@ export default function Pokedex() {
        
         const fetchData = async () => {
             let response = await axios.get(
-                'https://pokeapi.co/api/v2/pokemon?limit=150'
+                'https://pokeapi.co/api/v2/pokemon?limit=879'
             );          
             setApiData(response.data.results);           
         };        
@@ -27,7 +27,7 @@ export default function Pokedex() {
   
     return (
     <div >
-        <h1>Pokedex cards</h1>
+        <h1>Pokédex</h1>
         <Searchbar handleSearch={handleSearch}/>
         <Dropdown />
         <div className='pokecards'>
