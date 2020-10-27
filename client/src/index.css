@@ -1232,6 +1232,7 @@ button {
   align-items: center;
   overflow: hidden;
   transition: height 1s;
+  z-index: 99;
 }
 #dropList.closed {
   height: 0;
@@ -1254,3 +1255,7 @@ button {
   justify-self: flex-start;
 }
 /* end of DropList styling */
+
+.moves div {
+  display: none;
+}
