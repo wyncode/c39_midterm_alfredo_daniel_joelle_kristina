@@ -7,6 +7,7 @@
   text-align: center;
   color: #000;
 }
+
 img {
   max-width: 100%;
 }
@@ -28,6 +29,9 @@ button {
 }
 
 .pokecards {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -35,17 +39,21 @@ button {
   text-transform: capitalize;
 }
 
-.pokecards div {
+.pokecards .card {
+  width: 15%;
+  min-width: 80px;
+  margin-bottom: 2%;
   border: 1px black solid;
   padding: 10px;
-  margin: 10px;
 }
-
+.pokecards .card:hover {
+  box-shadow: 0px 0px 15px 5px #333;
+}
 .pokepage {
   height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pokepage .container {
@@ -56,6 +64,13 @@ button {
 
 .pokepage .image {
   width: 50%;
+}
+
+.pokepage .image img {
+  transition: transform 1.5s;
+}
+.pokepage:hover .image img {
+  transform: scale(1.2);
 }
 
 .pokepage .info {
@@ -111,11 +126,16 @@ button {
   margin: 4px;
   font-size: 14px;
   opacity: 0.9;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card {
   max-width: 300px;
 }
+
 .card h6 {
   font-size: 1.2rem;
 }
@@ -159,13 +179,11 @@ button {
     #869dfa,
     #6c81f8,
     #5564f3,
-    #4344eb,
+    #4344eb
   );
 }
 
-
 .bug.grass {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #9de233,
@@ -178,7 +196,6 @@ button {
     #a3d65b,
     #89c439,
     #6fb306
-
   );
 }
 
@@ -194,7 +211,7 @@ button {
     #dff5bd,
     #caef93,
     #b5e968,
-    #9de233,
+    #9de233
   );
 }
 
@@ -210,7 +227,7 @@ button {
     #b5e968,
     #caef93,
     #dff5bd,
-    #f2fae5,
+    #f2fae5
   );
 }
 
@@ -230,9 +247,7 @@ button {
   );
 }
 
-
 .dark {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #b69d95,
@@ -244,7 +259,6 @@ button {
 }
 
 .dark.flying {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #261813,
@@ -256,14 +270,9 @@ button {
     #869dfa,
     #6c81f8,
     #5564f3,
-    #4344eb,
-
-
-
-
+    #4344eb
   );
 }
-
 
 .dark.normal {
   background-image: linear-gradient(
@@ -278,12 +287,10 @@ button {
     #6a564f,
     #473630,
     #261813
- 
   );
 }
 
 .dark.poison {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #c105b0,
@@ -295,12 +302,11 @@ button {
     #8f7971,
     #6a564f,
     #473630,
-    #261813,
+    #261813
   );
 }
 
 .dark.water {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #261813,
@@ -317,7 +323,6 @@ button {
 }
 
 .dragon {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #ebe2f2,
@@ -329,7 +334,6 @@ button {
 }
 
 .dragon.electric {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #59079e,
@@ -346,7 +350,6 @@ button {
 }
 
 .dragon.fire {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #fc8840,
@@ -358,26 +361,25 @@ button {
     #8148b4,
     #a67bc9,
     #c9aede,
-    #ebe2f2,
-    );
-  }
+    #ebe2f2
+  );
+}
 
-  .dragon.flying {
-    background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
-    background-image: linear-gradient(
-      to left top,
-      #ebe2f2,
-      #c9aede,
-      #a67bc9,
-      #8148b4,
-      #59079e,
-      #4344eb,
-      #5564f3,
-      #6c81f8,
-      #869dfa,
-      #a4b8f9,
-    );
-  }
+.dragon.flying {
+  background-image: linear-gradient(
+    to left top,
+    #ebe2f2,
+    #c9aede,
+    #a67bc9,
+    #8148b4,
+    #59079e,
+    #4344eb,
+    #5564f3,
+    #6c81f8,
+    #869dfa,
+    #a4b8f9
+  );
+}
 
 .electric {
   background-image: linear-gradient(
@@ -402,7 +404,7 @@ button {
     #5564f3,
     #6c81f8,
     #869dfa,
-    #a4b8f9,
+    #a4b8f9
   );
 }
 
@@ -418,15 +420,14 @@ button {
     #f1e858,
     #f1da42,
     #f1cc2b,
-    #f1bd07,
+    #f1bd07
   );
 }
 
 .electric.rock {
   background-image: linear-gradient(
     to left top,
-    #987c27
-    #ad9241,
+    #987c27 #ad9241,
     #c2a85a,
     #d7bf74,
     #edd68e,
@@ -434,15 +435,14 @@ button {
     #f1e858,
     #f1da42,
     #f1cc2b,
-    #f1bd07,
+    #f1bd07
   );
 }
 
 .electric.steel {
   background-image: linear-gradient(
     to left top,
-    #53595f
-    #74797e,
+    #53595f #74797e,
     #969a9e,
     #babdc0,
     #dfe1e3,
@@ -450,7 +450,7 @@ button {
     #f1e858,
     #f1da42,
     #f1cc2b,
-    #f1bd07,
+    #f1bd07
   );
 }
 
@@ -466,13 +466,11 @@ button {
     #f1e858,
     #f1da42,
     #f1cc2b,
-    #f1bd07,
-  
+    #f1bd07
   );
 }
 
 .fairy {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #ecd9ea,
@@ -484,7 +482,6 @@ button {
 }
 
 .fairy.flying {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #ecd9ea,
@@ -495,10 +492,9 @@ button {
     #a4b8f9,
     #869dfa,
     #6c81f8,
-    #5564f3,
+    #5564f3
   );
 }
-
 
 .fairy.normal {
   background-image: linear-gradient(
@@ -512,13 +508,11 @@ button {
     #a5a5a2,
     #80807e,
     #5d5d5b,
-    #3c3c3b,
+    #3c3c3b
   );
 }
 
-
 .fairy.poison {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #c105b0,
@@ -530,12 +524,11 @@ button {
     #e9c9e6,
     #e6b8e1,
     #e3a7dc,
-    #e096d7,
+    #e096d7
   );
 }
 
 .fairy.psychic {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #e096d7,
@@ -552,7 +545,6 @@ button {
 }
 
 .fairy.water {
-  background-image: url(https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #0918b2,
@@ -564,12 +556,7 @@ button {
     #e9c9e6,
     #e6b8e1,
     #e3a7dc,
-    #e096d7,
-
-   
-  
-
-   
+    #e096d7
   );
 }
 
@@ -584,8 +571,6 @@ button {
   );
 }
 
-
-
 .fighting.flying {
   background-image: linear-gradient(
     to left top,
@@ -598,7 +583,7 @@ button {
     #5564f3,
     #6c81f8,
     #869dfa,
-    #a4b8f9,
+    #a4b8f9
   );
 }
 
@@ -625,11 +610,9 @@ button {
     #ed66b1,
     #e951a3,
     #e43895,
-    #df0c86,
+    #df0c86
   );
 }
-
-
 
 .fighting.water {
   background-image: linear-gradient(
@@ -644,13 +627,10 @@ button {
     #2070e0,
     #0049cc,
     #0918b2
-    
   );
 }
 
-
 .fire {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #fc8840,
@@ -660,13 +640,8 @@ button {
     #eb1212
   );
 }
-.fire:hover {
-  background-image: url(https://www.searchpng.com/wp-content/uploads/2018/12/Fire-PNG-Transparent-715x715.png);
-  background-size: contain;
-}
 
 .fire.flying {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #fc8840,
@@ -678,12 +653,11 @@ button {
     #5564f3,
     #6c81f8,
     #869dfa,
-    #a4b8f9,
+    #a4b8f9
   );
 }
 
 .fire.ghost {
-  background-image: url(https://images.unsplash.com/photo-1536167480021-ee03bbda5ab8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
   background-image: linear-gradient(
     to left top,
     #eb1212,
@@ -722,7 +696,7 @@ button {
     #869dfa,
     #6c81f8,
     #5564f3,
-    #4344eb,
+    #4344eb
   );
 }
 
@@ -738,10 +712,9 @@ button {
     #869dfa,
     #6c81f8,
     #5564f3,
-    #4344eb, 
+    #4344eb
   );
 }
-
 
 .flying.ice {
   background-image: linear-gradient(
@@ -771,8 +744,7 @@ button {
     #5d5d5b,
     #80807e,
     #a5a5a2,
-    #cbcbc8,
- 
+    #cbcbc8
   );
 }
 
@@ -788,7 +760,7 @@ button {
     #c640bf,
     #ca5ece,
     #cf78da,
-    #d590e6,
+    #d590e6
   );
 }
 
@@ -804,7 +776,7 @@ button {
     #5564f3,
     #6c81f8,
     #869dfa,
-    #a4b8f9,
+    #a4b8f9
   );
 }
 
@@ -820,7 +792,7 @@ button {
     #5564f3,
     #6c81f8,
     #869dfa,
-    #a4b8f9,
+    #a4b8f9
   );
 }
 
@@ -836,8 +808,8 @@ button {
     #5096ee,
     #2070e0,
     #0049cc,
-    #0918b2,
-      );
+    #0918b2
+  );
 }
 
 .ghost {
@@ -867,10 +839,7 @@ button {
   );
 }
 
-
-
 .grass {
-  background-image: url(https://images.unsplash.com/photo-1492185244344-91fde303149e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
   background-image: linear-gradient(
     to left top,
     #d4fa99,
@@ -881,9 +850,7 @@ button {
   );
 }
 
-
 .grass.poison {
-  background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
     #d4fa99,
@@ -900,7 +867,6 @@ button {
 }
 
 .grass.psychic {
-  background-image: url(https://images.unsplash.com/photo-1492185244344-91fde303149e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
   background-image: linear-gradient(
     to left top,
     #6fb306,
@@ -915,6 +881,7 @@ button {
     #df0c86
   );
 }
+
 .ground {
   background-image: linear-gradient(
     to left top,
@@ -939,7 +906,6 @@ button {
     #80735e,
     #574933,
     #302209
- 
   );
 }
 
@@ -998,7 +964,7 @@ button {
     #e3a7dc,
     #e6b8e1,
     #e9c9e6,
-    #ecd9ea,
+    #ecd9ea
   );
 }
 
@@ -1014,7 +980,7 @@ button {
     #ed66b1,
     #e951a3,
     #e43895,
-    #df0c86,
+    #df0c86
   );
 }
 
@@ -1030,7 +996,7 @@ button {
     #74797e,
     #969a9e,
     #babdc0,
-    #dfe1e3,
+    #dfe1e3
   );
 }
 
@@ -1049,7 +1015,6 @@ button {
     #0918b2
   );
 }
-
 
 .normal {
   background-image: linear-gradient(
@@ -1074,15 +1039,11 @@ button {
     #ed66b1,
     #e951a3,
     #e43895,
-    #df0c86,
+    #df0c86
   );
 }
 
-
-
-
 .poison {
-  background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
     #d590e6,
@@ -1094,7 +1055,6 @@ button {
 }
 
 .poison.ground {
-  background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
     #c105b0,
@@ -1125,8 +1085,8 @@ button {
     #df0c86
   );
 }
+
 .poison.water {
-  background-image: url(https://images.unsplash.com/photo-1519066473994-a7506988851d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=671&q=80);
   background-image: linear-gradient(
     to left top,
     #c105b0,
@@ -1139,10 +1099,8 @@ button {
     #2070e0,
     #0049cc,
     #0918b2
- 
   );
 }
-
 
 .psychic {
   background-image: linear-gradient(
@@ -1152,11 +1110,8 @@ button {
     #e951a3,
     #e43895,
     #df0c86
-    
   );
 }
-
-
 
 .psychic.water {
   background-image: linear-gradient(
@@ -1175,7 +1130,6 @@ button {
 }
 
 .rock {
-  background-image: url(https://images.unsplash.com/photo-1549645402-a9d655c5c344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #edd68e,
@@ -1186,9 +1140,7 @@ button {
   );
 }
 
-
 .rock.water {
-  background-image: url(https://images.unsplash.com/photo-1549645402-a9d655c5c344?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
   background-image: linear-gradient(
     to left top,
     #0918b2,
@@ -1199,8 +1151,8 @@ button {
     #edd68e,
     #d7bf74,
     #c2a85a,
-      #ad9241,
-      #987c27
+    #ad9241,
+    #987c27
   );
 }
 
