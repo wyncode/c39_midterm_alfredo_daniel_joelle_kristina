@@ -30,7 +30,10 @@ export default function Pokecard ({pokemon}) {
                 <img alt= {pokemon.name} src={image}/>
             </Link>
             <Link className="cardback" to={`/pokemon/${pokemon.name}`}>
-                {/* <p>BACK</p>  */}
+                <h6>{pokemon.name}</h6>
+                <p>{type}</p>
+                <p>{type1}</p>
+                <span>TYPE</span>
             </Link>
         </div>
         )}
