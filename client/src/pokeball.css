@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'pokemonsolid';
+  src: local('pokemonsolid'), url(./fonts/pokemonsolid.ttf) format('truetype');;
+}
+
 
 #HomeBackground {
  background-image: url("./images/HomeBackground.jpg");
@@ -9,16 +14,14 @@
 
 .logo{
   width: 550px;
-
 }
 
 #HomeBackground h1 {
   position: absolute;
   bottom: 22%;
   width: 100%;
-  font-family: 'Racing Sans One', cursive;
-  font-weight: 900;
-  color: #FF0102;
+  font-family: 'pokemonsolid';
+  color: black;
   }
 
 .poke_box{
