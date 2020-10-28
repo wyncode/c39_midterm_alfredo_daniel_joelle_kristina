@@ -2,7 +2,7 @@ import React, {useState, useEffect}from 'react';
 import axios from 'axios';
 import Pokecard from './Pokecard';
 import Searchbar from './Searchbar';
-import Dropdown from './Dropdown.jsx';
+import Dropdown from './Dropdown';
 
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
