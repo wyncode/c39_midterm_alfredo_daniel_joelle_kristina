@@ -36,7 +36,7 @@ export default function Pokedex() {
         <>
             {loading ? (
                 <>
-                    <h2 class="loading">Fetching All Pokemons!</h2>
+                    <h2 class="loading">Catching All Pokémon!</h2>
                     <Pokeball />
                 </>
             ) : (
