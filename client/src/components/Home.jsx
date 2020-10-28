@@ -12,7 +12,7 @@ export default function Home() {
             <Link to="/Pokedex">
                 <Pokeball />
             </Link> 
-            <h1> Hardcore Pokedex </h1>
+            <h1>PokeCode </h1>
         </div>
     )
 }
