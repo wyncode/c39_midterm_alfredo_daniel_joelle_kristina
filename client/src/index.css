@@ -47,13 +47,13 @@ nav .searchBar {
 }
 .backbutton {
   font-weight: 500;
-  font-size: 15px;
+  font-size: 20px;
   padding: 16px;
   border-radius: 12%;
   position: absolute;
   top: 5%;
   left: 5%;
-  background-image: linear-gradient(to bottom, #9c9c9c, #787878, #555555, #353535, #181818);
+  background-image: linear-gradient(to bottom, #9c9c9c, #787878, #555555);
   color: white;
   max-width: 0;
   -webkit-transition: max-width 1s;
