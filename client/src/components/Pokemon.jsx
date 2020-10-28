@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
+import Popup from "reactjs-popup";
 
 export default function Pokemon() {
     let { name } = useParams();
@@ -73,21 +74,25 @@ export default function Pokemon() {
                 })}
                </div>
 
-               <div className="physical">
+              <div className="physical">
               <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
               <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
               </div>
 
-                <div className="moves">
-                {/* <button onClick={()=>{}}>Show Moves</button> */}
-                <div>Moves:
-                {pokemon &&
-                moves.map((move, index) =>{
-                  return <p>{move.move.name}</p>
-                }
-                )}
-                </div>
-                </div>
+
+
+                <div className='moves'>
+                  <Popup trigger={<button>Moves</button>} position="right center">
+                    <div className='pokemoves'>
+                      <div>
+                      {pokemon &&
+                      moves.map((move, index) =>{
+                      return <p>{move.move.name}</p>
+                      })}
+                      </div>
+                    </div>
+                  </Popup>              
+              </div>
 
           </div>
         </div>

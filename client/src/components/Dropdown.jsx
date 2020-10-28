@@ -20,11 +20,15 @@ export default function Dropdown() {
                 <button className="closeDropList" onClick={(e) => setClosed(!closed)}>
                     &times;
                 </button>
-                {apiDataTypes && apiDataTypes.map((type, index) => {
-                    if (type.name !== 'unknown' && type.name !== 'shadow') {
-                        return <Link key={type.name} to={`/type/${type.name}`} className={type.name}>{type.name}</Link>;
-                    }
-                })}
+                <ul>
+                    {apiDataTypes && apiDataTypes.map((type, index) => {
+                        if (type.name !== 'unknown' && type.name !== 'shadow') {
+                            return <li className={type.name}>
+                                        <Link key={type.name} to={`/type/${type.name}`} onClick={(e) => setClosed(!closed)}>{type.name}</Link>
+                                    </li>
+                        }
+                    })}
+                </ul>
             </div>
             <button onClick={(e) => setClosed(!closed)}>Types</button>
         </div>

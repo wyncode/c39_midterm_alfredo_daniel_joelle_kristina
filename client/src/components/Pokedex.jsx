@@ -2,7 +2,8 @@ import React, {useState, useEffect}from 'react';
 import axios from 'axios';
 import Pokecard from './Pokecard';
 import Searchbar from './Searchbar';
-import Dropdown from './Dropdown.jsx';
+import Dropdown from './Dropdown';
+import Pokeball from './Pokeball';
 
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
@@ -32,18 +33,18 @@ export default function Pokedex() {
   
     return (
         <>
-        {loading ? (
-        <div>
-            <h1>Loading...</h1>
-        </div>
+            {loading ? (
+                <>
+                    <h2 class="loading">Fetching All Pokemons!</h2>
+                    <Pokeball />
+                </>
             ) : (
                 <div className="pokedexPage">
                     <Dropdown />
                     <div className="navSticky">
                         <nav>
                             <h1>Pokédex</h1>
-                            <Searchbar handleSearch={handleSearch}/>
-                            
+                            <Searchbar handleSearch={handleSearch}/>                     
                         </nav>
                     </div>
                 <div className='pokecards'>
