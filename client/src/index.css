@@ -1253,17 +1253,13 @@ nav .searchBar {
   );
 }
 
-/* DropList styling */
+/* Dropdown styling */
 #dropList {
   position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
   background-color: #c7c3c3f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   transition: height 1s;
   z-index: 99;
@@ -1271,22 +1267,35 @@ nav .searchBar {
 #dropList.closed {
   height: 0;
 }
+#dropList ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 50%;
+  margin: auto;
+  padding: 5% 0;
+}
+#dropList li {
+  margin: 5px 20px;
+}
 #dropList a {
-  text-decoration: none;
+  display: block;
   color: white;
-  padding: 0.5rem;
-  width: 10%;
-  margin: 5px;
-  min-width: 100px;
+  padding: 0.75rem 2rem;
   text-align: center;
 }
+#dropList a:hover {
+  background-image: linear-gradient(180deg, #ffffff82, transparent, #ffffff82);
+}
 #dropList .closeDropList {
-  align-self: flex-end;
-  margin-right: 8%;
+  position: absolute;
+  right: 8%;
+  top: 8%;
   background-color: transparent;
   font-size: 5rem;
   border: none;
-  justify-self: flex-start;
 }
 /* end of DropList styling */
 
@@ -1296,27 +1305,25 @@ nav .searchBar {
 
 .backbutton {
   position: absolute;
-  }
-  .pokepage .container {
+}
+.pokepage .container {
   width: 80%;
   max-width: 1000px;
   flex-wrap: wrap;
   justify-content: center;
-  }
-  .pokepage .container > div {
+}
+.pokepage .container > div {
   width: 50%;
   min-width: 300px;
-  }
-  
- .pokemoves {
-   background: white;
-   border: black 1px solid
- }
+}
 
- .pokemoves p {
-   margin: 3px;
-   padding: 3px;
-   border: 1px black solid;
- }
-  
-  
+.pokemoves {
+  background: white;
+  border: black 1px solid;
+}
+
+.pokemoves p {
+  margin: 3px;
+  padding: 3px;
+  border: 1px black solid;
+}
