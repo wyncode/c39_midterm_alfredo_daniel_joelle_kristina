@@ -7,6 +7,7 @@ import Dropdown from './Dropdown.jsx';
 export default function PokemonType() {  
     let {type} = useParams();
     const [apiData, setApiData] = useState([]);
+    const [closed, setClosed] = useState(true)
 
 
     useEffect(() => {
@@ -25,7 +26,8 @@ export default function PokemonType() {
     return (
     <div >
         <Link to="/pokedex">Back to All</Link>
-        <Dropdown />
+        <button onClick={(e) => setClosed(!closed)}>Types</button>    
+        <Dropdown value={closed} onChange={(v) => setClosed(v)} />
         <div className='pokecards'>
             {apiData && apiData.map((pokemon,index) => {
             return (<Pokecard key={index} pokemon={pokemon.pokemon}/>);           
