@@ -1314,7 +1314,7 @@ nav .searchBar {
 }
 /* end of DropList styling */
 
-.moves div {
+.moves {
   display: none;
 }
 
@@ -1334,11 +1334,32 @@ nav .searchBar {
 
 .pokemoves {
   background: white;
-  border: black 1px solid;
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5;
+  left: 0;
+  background-color: #c7c3c3f2;
+  overflow: hidden;
+  z-index: 99;
+  border: 1px black solid;
 }
 
 .pokemoves p {
-  margin: 3px;
-  padding: 3px;
+  margin: 10px;
+  
+  padding: 5px;
   border: 1px black solid;
+  font-size: medium;
+  border-radius: 10%;
+  background-color: white;
+  flex-wrap: column;
+  flex-direction: column;
+  margin: auto;
+}
+
+.moves.open {
+  display: block;
 }

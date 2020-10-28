@@ -12,6 +12,7 @@ export default function Pokemon() {
     const [typeClass, setTypeClass] = useState(["pokemon"]);
     const [typeClass1, setTypeClass1] = useState("");
     const [moves, setMoves] = useState([]);
+    const [open, setOpen] = useState(false)
     
 
     useEffect(() => {
@@ -80,20 +81,18 @@ export default function Pokemon() {
               </div>
 
 
-
-                <div className='moves'>
-                  <Popup trigger={<button>Moves</button>} position="right center">
+             <button onClick={(e)=>{setOpen(true)}}>Moves</button>
+                <div className={open ? "moves open" : "moves"}>
+                <button className="closeDropList" onClick={(e) => setOpen(false)}>
+                    &times;
+                </button>
                     <div className='pokemoves'>
-                      <div>
                       {pokemon &&
                       moves.map((move, index) =>{
                       return <p>{move.move.name}</p>
-                      })}
-                      </div>
-                    </div>
-                  </Popup>              
+                      })} 
+                  </div>            
               </div>
-
           </div>
         </div>
        </div>
