@@ -34,7 +34,7 @@ export default function Pokemon() {
         <div className={"pokepage " + typeClass + " " + typeClass1}>
           <Link to="/Pokedex">
              <button className="backbutton">
-               Back
+             <i class="fas fa-angle-left">            Back</i>
             </button>
            </Link>
 

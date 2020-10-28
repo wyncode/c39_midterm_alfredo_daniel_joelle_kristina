@@ -2,9 +2,10 @@ import React, {useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-export default function Dropdown() {
+export default function Dropdown(props) {
     const [apiDataTypes, setApiDataTypes] = useState([]);
     const [closed, setClosed] = useState(true);
+    
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,7 +17,7 @@ export default function Dropdown() {
 
     return (
         <div>
-            <div id="dropList" className={closed ? "closed" : " "}>
+            <div id="dropList" className={closed? "closed" : " "}>
                 <button className="closeDropList" onClick={(e) => setClosed(!closed)}>
                     &times;
                 </button>
@@ -30,7 +31,7 @@ export default function Dropdown() {
                     })}
                 </ul>
             </div>
-            <button onClick={(e) => setClosed(!closed)}>Types</button>
+            <button className="typesButton" onClick={(e) => setClosed(!closed)}><i class="fas fa-bars"></i></button>
         </div>
     );
 };

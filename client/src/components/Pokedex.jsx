@@ -8,7 +8,7 @@ import Pokeball from './Pokeball';
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
     const [apiData, setApiData] = useState([]);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
 
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function Pokedex() {
         <>
             {loading ? (
                 <>
-                    <h2 class="loading">Fetching All Pokemons!</h2>
+                    <h2 class="loading">Catching All Pokemón!</h2>
                     <Pokeball />
                 </>
             ) : (
