@@ -37,6 +37,9 @@ nav .searchBar {
   width: 50%;
   height: 2rem;
 }
+.loading {
+  margin-top: 5%;
+}
 .pokedexPage {
   padding-top: 100px;
 }
