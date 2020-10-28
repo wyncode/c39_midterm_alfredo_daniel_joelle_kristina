@@ -18,7 +18,7 @@ export default function Pokedex() {
        setLoading(true)
         const fetchData = async () => {
             let response = await axios.get(
-                'https://pokeapi.co/api/v2/pokemon?limit=151'
+                'https://pokeapi.co/api/v2/pokemon?limit=400'
             )       
             setApiData(response.data.results);   
             setTimeout(() => {
@@ -49,7 +49,6 @@ export default function Pokedex() {
                     <div className="navSticky">
                         <nav>
                         <Link className='pokeball1' to="/"><img src= {pokeball1} alt="pokeball" /></Link>
-                        <h1>Pokédex</h1>
                             <Searchbar handleSearch={handleSearch}/>
                             <button onClick={(e) => setClosed(!closed)}>Types</button>                     
                         </nav>

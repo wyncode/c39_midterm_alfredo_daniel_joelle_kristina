@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import Popup from "reactjs-popup";
 
 export default function Pokemon() {
     let { name } = useParams();
@@ -12,7 +11,9 @@ export default function Pokemon() {
     const [typeClass, setTypeClass] = useState(["pokemon"]);
     const [typeClass1, setTypeClass1] = useState("");
     const [moves, setMoves] = useState([]);
-    const [open, setOpen] = useState(false)
+    const [stats, setStats] = useState([]);
+    const [openMoves, setOpenMoves] = useState(false);
+    const [openStats, setOpenStats] = useState(false)
     
 
     useEffect(() => {
@@ -26,76 +27,96 @@ export default function Pokemon() {
             setAbilities(response.data.abilities);
             setTypeClass(response.data.types[0].type.name);
             setTypeClass1(response.data.types[1] && response.data.types[1].type.name);
-            setMoves(response.data.moves)
+            setMoves(response.data.moves);
+            setStats(response.data.stats);
         };
         fetchData();
     },[name]);
 
     return (
         <div className={"pokepage " + typeClass + " " + typeClass1}>
+          
+          
           <Link to="/Pokedex">
-             <button className="backbutton">
-             <i class="fas fa-angle-left">         Back</i>
-            </button>
-           </Link>
+              <button className="backbutton">
+                <i class="fas fa-angle-left">Back</i>
+              </button>
+          </Link>
 
-           <div className="container">
-           <div className="image">
-            <img src={image} alt={pokemon.name} />
+
+          <div className="container">
+
+            <div className="image">
+              <img src={image} alt={pokemon.name} />
             </div>
-      
+
+
             <div className="info">
 
-            <div className="id">
-              <p>#{pokemon && pokemon.id}</p>
+              <div className="id">
+                <p>#{pokemon && pokemon.id}</p>
               </div>
 
               <div className="name">
-              <p>{pokemon && pokemon.name}</p>
+                <p>{pokemon && pokemon.name}</p>
               </div>
 
 
               <div className="type">
-              {pokemon &&
-                types.map((type, index) => {
+                {pokemon && types.map((type, index) => {
                   return <p key={index}>{type.type.name}</p>;
                 })}
-                 <span className="typeword">
-                  Type
-                </span>
+                <span className="typeword">Type</span>
               </div>
 
              
 
               <div className="abilities">
-              Abilities:
-              {pokemon &&
-                abilities.map((ability, index) => {
+                Abilities:
+                {pokemon && abilities.map((ability, index) => {
                   return <p>{ability.ability.name}</p>;
                 })}
                </div>
 
               <div className="physical">
-              <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
-              <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
+                <p> Height: {pokemon && Math.round(pokemon.height*0.328084)} ft</p>
+                <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
               </div>
 
 
-             <button onClick={(e)=>{setOpen(true)}}>Moves</button>
-                <div className={open ? "moves open" : "moves"}>
-                <button className="closeDropList" onClick={(e) => setOpen(false)}>
-                    &times;
+              <button onClick={(e)=>{setOpenMoves(true)}}>Moves</button>
+              <div className={openMoves ? "moves open" : "moves"}>
+                <button className="closeDropList" onClick={(e) => setOpenMoves(false)}>
+                  &times;
                 </button>
-                    <div className='pokemoves'>
-                      {pokemon &&
-                      moves.map((move, index) =>{
+                <div className='pokemoves'>
+                    {pokemon && moves.map((move, index) =>{
                       return <p>{move.move.name}</p>
-                      })} 
-                  </div>            
+                    })} 
+                </div>            
               </div>
+            
+              <button onClick={(e)=>{setOpenStats(true)}}>Stats</button>
+              <div className={openStats ? "stats open" : "stats"}>
+                <button className="closeDropList" onClick={(e) => setOpenStats(false)}>
+                  &times;
+                </button>
+                <div className='pokestats'>
+                  {pokemon && stats.map((stat, index) => {
+                    return (
+                      <div>
+                        <p>{stat.stat.name}:{stat.base_stat} pts </p>
+                        <p style={{ width: stat.base_stat + "px"}}></p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+
           </div>
         </div>
-       </div>
+        </div>
     )
     
 }

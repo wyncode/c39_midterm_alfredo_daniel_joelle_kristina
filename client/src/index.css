@@ -9,6 +9,12 @@
   font-family: Arial, Helvetica, sans-serif;
 
 }
+body {
+  background-image: linear-gradient(to bottom, #f5f5f5, #f0f4fa, #e4f4fe, #d6f6fc, #ccf7f2);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
 
 img {
   max-width: 100%;
@@ -27,6 +33,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to top, #f5f5f5, #f0f4fa, #e4f4fe, #d6f6fc, #ccf7f2);
 }
 .navSticky > :first-child {
   width: 90%;
@@ -44,7 +51,7 @@ nav .searchBar {
 }
 .pokedexPage, 
 .pokemonTypePage {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 .pokemonTypePage .navSticky h5 {
   text-transform: capitalize;
@@ -1323,9 +1330,6 @@ nav .searchBar {
 }
 /* end of DropList styling */
 
-.moves {
-  display: none;
-}
 
 .backbutton {
   position: absolute;
@@ -1339,6 +1343,12 @@ nav .searchBar {
 .pokepage .container > div {
   width: 50%;
   min-width: 300px;
+}
+.moves {
+  display: none;
+}
+.moves.open {
+  display: block;
 }
 
 .pokemoves {
@@ -1369,6 +1379,10 @@ nav .searchBar {
   margin: auto;
 }
 
-.moves.open {
+.stats {
+  display: none;
+}
+
+.stats.open {
   display: block;
 }
