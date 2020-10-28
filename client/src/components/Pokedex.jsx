@@ -4,6 +4,8 @@ import Pokecard from './Pokecard';
 import Searchbar from './Searchbar';
 import Dropdown from './Dropdown';
 import Pokeball from './Pokeball';
+import pokeball1 from '../images/pokeball1.png'
+import {Link} from "react-router-dom";
 
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
@@ -41,14 +43,18 @@ export default function Pokedex() {
                 </>
             ) : (
                 <div className="pokedexPage">
+
                     <Dropdown value={closed} onChange={(v) => setClosed(v)} />
+
                     <div className="navSticky">
                         <nav>
-                            <h1>Pokédex</h1>
+                        <Link className='pokeball1' to="/"><img src= {pokeball1} alt="pokeball" /></Link>
+                        <h1>Pokédex</h1>
                             <Searchbar handleSearch={handleSearch}/>
                             <button onClick={(e) => setClosed(!closed)}>Types</button>                     
                         </nav>
                     </div>
+                    
                 <div className='pokecards'>
                     {apiData && filteredPokemon.map((pokemon,index) => {
                     return (<Pokecard key={index} pokemon={pokemon}/>);           
