@@ -8,8 +8,9 @@ import Pokeball from './Pokeball';
 export default function Pokedex() {  
     const [searchValue, setSearchValue] = useState('');
     const [apiData, setApiData] = useState([]);
-    const [loading, setLoading] = useState(false);
 
+    const [loading, setLoading] = useState(false)
+    const [closed, setClosed] = useState(true)
 
     useEffect(() => {
        setLoading(true)
@@ -40,11 +41,12 @@ export default function Pokedex() {
                 </>
             ) : (
                 <div className="pokedexPage">
-                    <Dropdown />
+                    <Dropdown value={closed} onChange={(v) => setClosed(v)} />
                     <div className="navSticky">
                         <nav>
                             <h1>Pokédex</h1>
-                            <Searchbar handleSearch={handleSearch}/>                     
+                            <Searchbar handleSearch={handleSearch}/>
+                            <button onClick={(e) => setClosed(!closed)}>Types</button>                     
                         </nav>
                     </div>
                 <div className='pokecards'>
