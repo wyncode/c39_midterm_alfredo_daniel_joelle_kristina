@@ -33,7 +33,9 @@ export default function Pokemon() {
     return (
         <div className={"pokepage " + typeClass + " " + typeClass1}>
           <Link to="/Pokedex">
-             <button className="backbutton">Back</button>
+             <button className="backbutton">
+               Back
+            </button>
            </Link>
 
            <div className="container">
@@ -77,6 +79,8 @@ export default function Pokemon() {
               <p> Weight: {pokemon && Math.round(pokemon.weight*0.220462)} lbs</p>
               </div>
 
+
+
                 <div className='moves'>
                   <Popup trigger={<button>Moves</button>} position="right center">
                     <div className='pokemoves'>
@@ -89,6 +93,7 @@ export default function Pokemon() {
                     </div>
                   </Popup>              
               </div>
+
           </div>
         </div>
        </div>

@@ -31,8 +31,8 @@ export default function Pokecard ({pokemon}) {
             </Link>
             <Link className="cardback" to={`/pokemon/${pokemon.name}`}>
                 <h6>{pokemon.name}</h6>
-                <p>{type}</p>
-                <p>{type1}</p>
+                <p>{type}<br></br>{type1}</p>
+                {/* <p>{type1}</p> */}
                 <span>TYPE</span>
             </Link>
         </div>
