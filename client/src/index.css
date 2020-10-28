@@ -1308,6 +1308,15 @@ nav .searchBar {
   min-width: 300px;
   }
   
- 
+ .pokemoves {
+   background: white;
+   border: black 1px solid
+ }
+
+ .pokemoves p {
+   margin: 3px;
+   padding: 3px;
+   border: 1px black solid;
+ }
   
   
