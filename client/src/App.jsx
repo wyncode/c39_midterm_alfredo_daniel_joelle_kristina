@@ -4,7 +4,6 @@ import Home from './components/Home';
 import Pokedex from './components/Pokedex';
 import Pokemon from './components/Pokemon';
 import PokemonType from './components/PokemonType';
-import './pokeball.css'
 
 
 
