@@ -50,7 +50,7 @@ export default function Pokedex() {
                         <nav>
                         <Link className='pokeball1' to="/"><img src= {pokeball1} alt="pokeball" /></Link>
                             <Searchbar handleSearch={handleSearch}/>
-                            <button onClick={(e) => setClosed(!closed)}>Types</button>                     
+                            <button onClick={(e) => setClosed(!closed)}>TYPES</button>                     
                         </nav>
                     </div>
                     

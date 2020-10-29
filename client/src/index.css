@@ -7,13 +7,20 @@
   text-align: center;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 body {
-  background-image: linear-gradient(to bottom, #f5f5f5, #f0f4fa, #e4f4fe, #d6f6fc, #ccf7f2);
+  background-image: linear-gradient(
+    to bottom,
+    #f5f5f5,
+    #f0f4fa,
+    #e4f4fe,
+    #d6f6fc,
+    #ccf7f2
+  );
   background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh;
+  font-size: 1rem;
 }
 
 img {
@@ -22,6 +29,14 @@ img {
 
 button {
   cursor: pointer;
+  border: 1px solid black;
+  background-color: white;
+}
+button:focus,
+button:hover,
+button:active {
+  border: 1px solid black;
+  border-radius: 0;
 }
 .navSticky {
   position: fixed;
@@ -33,7 +48,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to top, #f5f5f5, #f0f4fa, #e4f4fe, #d6f6fc, #ccf7f2);
+  background-image: linear-gradient(
+    to top,
+    #f5f5f5,
+    #f0f4fa,
+    #e4f4fe,
+    #d6f6fc,
+    #ccf7f2
+  );
 }
 .navSticky > :first-child {
   width: 90%;
@@ -46,45 +68,49 @@ nav .searchBar {
   width: 50%;
   height: 2rem;
 }
+.navSticky button {
+  padding: 0.5rem;
+  font-weight: 900;
+}
 .loading {
   margin-top: 5%;
 }
-.pokedexPage, 
+.pokedexPage,
 .pokemonTypePage {
   padding-top: 120px;
 }
 .pokemonTypePage .navSticky h5 {
   text-transform: capitalize;
   font-size: 24px;
-
 }
 .pokeball1 {
   width: 40px;
 }
 .backbutton {
+  height: 2rem;
+  width: 2rem;
   font-weight: 500;
-  font-size: 20px;
-  padding: 16px;
-  border-radius: 12%;
+  padding: 0.5rem;
   position: absolute;
   top: 5%;
   left: 5%;
-  background-image: linear-gradient(to bottom, #9c9c9c, #787878, #555555);
-  color: white;
-  max-width: 0;
-  -webkit-transition: max-width 1s;
-  transition: max-width 1s;
+  background-color: transparent;
+  -webkit-transition: width 1s;
+  transition: width 1s;
   overflow: hidden;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
+.backbutton i {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
 .backbutton:hover {
-  background-image: linear-gradient(to top, #75a4e4, #5c8dd6, #4477c8, #2a61b9, #054ba9);
-  color: white;
-  max-width: 7rem;
-
+  background-color: white;
+  width: 5rem;
 }
-
 
 .pokecards {
   width: 90%;
@@ -106,7 +132,7 @@ nav .searchBar {
   border: 1px black solid;
   border-radius: 10px;
   padding: 10px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .pokecards .card:hover {
@@ -127,7 +153,14 @@ nav .searchBar {
 }
 .pokecards .card .cardback {
   transform: rotateY(180deg);
-  background-image: linear-gradient(to bottom, #ffffff, #f8f7f8, #f3f0f0, #ebe8e6, #e2e2de);
+  background-image: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f8f7f8,
+    #f3f0f0,
+    #ebe8e6,
+    #e2e2de
+  );
   border-radius: 10px;
   border: 0.3px solid #000;
   display: flex;
@@ -169,7 +202,7 @@ nav .searchBar {
 
 .pokepage .container > div {
   width: 50%;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .pokepage .image {
@@ -184,6 +217,7 @@ nav .searchBar {
 }
 
 .pokepage .info {
+  position: relative;
   width: 50%;
   background: #fff;
   display: flex;
@@ -1290,7 +1324,7 @@ nav .searchBar {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #c7c3c3f2;
+  background-color: #000000f2;
   overflow: hidden;
   transition: height 1s;
   z-index: 99;
@@ -1327,9 +1361,9 @@ nav .searchBar {
   background-color: transparent;
   font-size: 5rem;
   border: none;
+  color: white;
 }
 /* end of DropList styling */
-
 
 .backbutton {
   position: absolute;
@@ -1344,45 +1378,100 @@ nav .searchBar {
   width: 50%;
   min-width: 300px;
 }
+.buttons button {
+  background-color: #a7ceda;
+  padding: 0.75rem 2rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+}
+.buttons button:hover {
+  background-image: linear-gradient(180deg, #ffffff82, transparent, #ffffff82);
+}
+.info button.closeDropList {
+  font-size: 2.5rem;
+  padding: 0.2rem 1rem;
+  border: none;
+  margin-bottom: 0.5rem;
+}
 .moves {
   display: none;
 }
 .moves.open {
-  display: block;
-}
-
-.pokemoves {
-  background: white;
-  margin-top: 5px;
-  padding: 10px;
   display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 5;
-  left: 0;
-  background-color: #c7c3c3f2;
-  overflow: hidden;
-  z-index: 99;
-  border: 1px black solid;
 }
-
-.pokemoves p {
-  margin: 10px;
-  
-  padding: 5px;
-  border: 1px black solid;
-  font-size: medium;
-  border-radius: 10%;
-  background-color: white;
-  flex-wrap: column;
-  flex-direction: column;
-  margin: auto;
+.moves span:nth-of-type(3n) {
+  color: #673ab7;
 }
-
+.moves span:nth-of-type(3n + 1) {
+  color: gray;
+}
+.moves span:nth-of-type(3n + 2) {
+  color: black;
+}
+.moves,
 .stats {
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 0;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid black;
+  border-radius: 10%;
+}
+.pokemoves {
+  width: 90%;
+}
+.stats.open {
+  display: flex;
+}
+.pokestats {
+  width: 100%;
+}
+.pokestats div {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+.pokestats p {
+  width: 50%;
+  display: inline-block;
+}
+.pokestats div > :first-child {
+  text-align: right;
+  padding-right: 5%;
+}
+.pokestats p span {
+  display: block;
+  background-color: blue;
+  height: 1.5rem;
 }
 
-.stats.open {
-  display: block;
+@media only screen and (max-width: 1080px) {
+  .info {
+    font-size: 0.85rem;
+  }
+  .pokestats div > :first-child {
+    font-size: 0.8rem;
+    padding-right: 2%;
+  }
+  .moves,
+  .stats {
+    padding: 2% 0;
+  }
+
+  .info button.closeDropList {
+    font-size: 2rem;
+  }
+  #dropList .closeDropList {
+    font-size: 3rem;
+  }
+  .pokecards .card {
+    height: 180px;
+  }
 }
