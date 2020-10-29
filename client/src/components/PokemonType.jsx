@@ -33,7 +33,7 @@ export default function PokemonType() {
             <div>
                 <Link className='pokeball1' to="/pokedex"><img src= {pokeball1} alt="pokeball" /> </Link>
                 <h5>{type}</h5>
-                <button onClick={(e) => setClosed(!closed)}>Types</button>
+                <button onClick={(e) => setClosed(!closed)}>TYPES</button>
             </div>
         </div>   
         

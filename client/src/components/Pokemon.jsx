@@ -39,7 +39,7 @@ export default function Pokemon() {
           
           <Link to="/Pokedex">
               <button className="backbutton">
-                <i class="fas fa-angle-left">Back</i>
+                <i class="fas fa-angle-left"></i> BACK
               </button>
           </Link>
 
@@ -84,19 +84,23 @@ export default function Pokemon() {
               </div>
 
 
-              <button onClick={(e)=>{setOpenMoves(true)}}>Moves</button>
+              <div className="buttons">
+                <button onClick={(e)=>{setOpenMoves(true)}}>MOVES</button>
+                <button onClick={(e)=>{setOpenStats(true)}}>STATS</button>
+              </div>
+              
+
               <div className={openMoves ? "moves open" : "moves"}>
                 <button className="closeDropList" onClick={(e) => setOpenMoves(false)}>
                   &times;
                 </button>
                 <div className='pokemoves'>
                     {pokemon && moves.map((move, index) =>{
-                      return <p>{move.move.name}</p>
+                      return <span>{move.move.name} </span>
                     })} 
                 </div>            
               </div>
             
-              <button onClick={(e)=>{setOpenStats(true)}}>Stats</button>
               <div className={openStats ? "stats open" : "stats"}>
                 <button className="closeDropList" onClick={(e) => setOpenStats(false)}>
                   &times;
@@ -105,8 +109,8 @@ export default function Pokemon() {
                   {pokemon && stats.map((stat, index) => {
                     return (
                       <div>
-                        <p>{stat.stat.name}:{stat.base_stat} pts </p>
-                        <p style={{ width: stat.base_stat + "px"}}></p>
+                        <p>{stat.stat.name}: {stat.base_stat} pts </p>
+                        <p><span style={{ width: 2*stat.base_stat + "px"}}></span></p>
                       </div>
                     );
                   })}
