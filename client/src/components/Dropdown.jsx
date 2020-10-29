@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function Dropdown(props) {
-    console.log(props)
     const [apiDataTypes, setApiDataTypes] = useState([]);
 
     useEffect(() => {
